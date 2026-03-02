@@ -31,20 +31,20 @@
   --color-m3-on-error-container: #410E0B;
 
   /* ── Surface ── */
-  --color-m3-surface: #FEA7FF;
-  --color-m3-surface-dim: #DED8E1;
-  --color-m3-surface-bright: #FEF7FF;
+  --color-m3-surface: #FFFFFF;
+  --color-m3-surface-dim: #D9D9D9;
+  --color-m3-surface-bright: #FFFFFF;
   --color-m3-surface-container-lowest: #FFFFFF;
-  --color-m3-surface-container-low: #F7F2FA;
-  --color-m3-surface-container: #F3EDF7;
-  --color-m3-surface-container-high: #ECE6F0;
-  --color-m3-surface-container-highest: #E6E0E9;
+  --color-m3-surface-container-low: #F7F7F7;
+  --color-m3-surface-container: #F1F1F1;
+  --color-m3-surface-container-high: #EBEBEB;
+  --color-m3-surface-container-highest: #E3E3E3;
   --color-m3-on-surface: #1D1B20;
   --color-m3-on-surface-variant: #49454F;
-  --color-m3-outline: #79747E;
-  --color-m3-outline-variant: #CAC4D0;
-  --color-m3-inverse-surface: #322F35;
-  --color-m3-inverse-on-surface: #F5EFF7;
+  --color-m3-outline: #7A7A7A;
+  --color-m3-outline-variant: #C9C9C9;
+  --color-m3-inverse-surface: #313131;
+  --color-m3-inverse-on-surface: #F4F4F4;
   --color-m3-inverse-primary: #D0BCFF;
   --color-m3-scrim: #000000;
   --color-m3-shadow: #000000;
