@@ -7,26 +7,26 @@ const colorTokens = [
     swatches: [
       { name: 'primary', bg: 'bg-m3-primary', text: 'text-m3-on-primary', value: '#9A76BE' },
       { name: 'on-primary', bg: 'bg-m3-on-primary', text: 'text-m3-primary', value: '#FFFFFF', border: true },
-      { name: 'primary-container', bg: 'bg-m3-primary-container', text: 'text-m3-on-primary-container', value: '#EADDFF' },
-      { name: 'on-primary-container', bg: 'bg-m3-on-primary-container', text: 'text-m3-primary-container', value: '#21005D' },
+      { name: 'primary-container', bg: 'bg-m3-primary-container', text: 'text-m3-on-primary-container', value: '#EDE0FF' },
+      { name: 'on-primary-container', bg: 'bg-m3-on-primary-container', text: 'text-m3-primary-container', value: '#583D72' },
     ],
   },
   {
     group: 'Secondary',
     swatches: [
-      { name: 'secondary', bg: 'bg-m3-secondary', text: 'text-m3-on-secondary', value: '#625B71' },
+      { name: 'secondary', bg: 'bg-m3-secondary', text: 'text-m3-on-secondary', value: '#FFA33C' },
       { name: 'on-secondary', bg: 'bg-m3-on-secondary', text: 'text-m3-secondary', value: '#FFFFFF', border: true },
-      { name: 'secondary-container', bg: 'bg-m3-secondary-container', text: 'text-m3-on-secondary-container', value: '#E8DEF8' },
-      { name: 'on-secondary-container', bg: 'bg-m3-on-secondary-container', text: 'text-m3-secondary-container', value: '#1D192B' },
+      { name: 'secondary-container', bg: 'bg-m3-secondary-container', text: 'text-m3-on-secondary-container', value: '#FFE5C4' },
+      { name: 'on-secondary-container', bg: 'bg-m3-on-secondary-container', text: 'text-m3-secondary-container', value: '#4D2800' },
     ],
   },
   {
     group: 'Tertiary',
     swatches: [
-      { name: 'tertiary', bg: 'bg-m3-tertiary', text: 'text-m3-on-tertiary', value: '#7D5260' },
+      { name: 'tertiary', bg: 'bg-m3-tertiary', text: 'text-m3-on-tertiary', value: '#252525' },
       { name: 'on-tertiary', bg: 'bg-m3-on-tertiary', text: 'text-m3-tertiary', value: '#FFFFFF', border: true },
-      { name: 'tertiary-container', bg: 'bg-m3-tertiary-container', text: 'text-m3-on-tertiary-container', value: '#FFD8E4' },
-      { name: 'on-tertiary-container', bg: 'bg-m3-on-tertiary-container', text: 'text-m3-tertiary-container', value: '#31111D' },
+      { name: 'tertiary-container', bg: 'bg-m3-tertiary-container', text: 'text-m3-on-tertiary-container', value: '#3D3D3D' },
+      { name: 'on-tertiary-container', bg: 'bg-m3-on-tertiary-container', text: 'text-m3-tertiary-container', value: '#E8E8E8' },
     ],
   },
   {
@@ -41,19 +41,19 @@ const colorTokens = [
   {
     group: 'Surface',
     swatches: [
-      { name: 'surface', bg: 'bg-m3-surface', text: 'text-m3-on-surface', value: '#FEF7FF', border: true },
-      { name: 'surface-dim', bg: 'bg-m3-surface-dim', text: 'text-m3-on-surface', value: '#DED8E1' },
-      { name: 'surface-container-low', bg: 'bg-m3-surface-container-low', text: 'text-m3-on-surface', value: '#F7F2FA' },
-      { name: 'surface-container', bg: 'bg-m3-surface-container', text: 'text-m3-on-surface', value: '#F3EDF7' },
-      { name: 'surface-container-high', bg: 'bg-m3-surface-container-high', text: 'text-m3-on-surface', value: '#ECE6F0' },
-      { name: 'surface-container-highest', bg: 'bg-m3-surface-container-highest', text: 'text-m3-on-surface', value: '#E6E0E9' },
+      { name: 'surface', bg: 'bg-m3-surface', text: 'text-m3-on-surface', value: '#FFFFFF', border: true },
+      { name: 'surface-dim', bg: 'bg-m3-surface-dim', text: 'text-m3-on-surface', value: '#D9D9D9' },
+      { name: 'surface-container-low', bg: 'bg-m3-surface-container-low', text: 'text-m3-on-surface', value: '#F7F7F7' },
+      { name: 'surface-container', bg: 'bg-m3-surface-container', text: 'text-m3-on-surface', value: '#F1F1F1' },
+      { name: 'surface-container-high', bg: 'bg-m3-surface-container-high', text: 'text-m3-on-surface', value: '#EBEBEB' },
+      { name: 'surface-container-highest', bg: 'bg-m3-surface-container-highest', text: 'text-m3-on-surface', value: '#E3E3E3' },
     ],
   },
   {
     group: 'Outline',
     swatches: [
-      { name: 'outline', bg: 'bg-m3-outline', text: 'text-white', value: '#79747E' },
-      { name: 'outline-variant', bg: 'bg-m3-outline-variant', text: 'text-m3-on-surface', value: '#CAC4D0' },
+      { name: 'outline', bg: 'bg-m3-outline', text: 'text-white', value: '#7A7A7A' },
+      { name: 'outline-variant', bg: 'bg-m3-outline-variant', text: 'text-m3-on-surface', value: '#C9C9C9' },
     ],
   },
 ]
@@ -90,6 +90,24 @@ const spacingTokens = [
   { name: 'm3-16', value: '64px', width: '64%' },
 ]
 
+const typographyScale = [
+  { role: 'Display Large', fontClass: 'font-display text-[57px] leading-[64px] tracking-[-0.25px]', sample: 'Display Large' },
+  { role: 'Display Medium', fontClass: 'font-display text-[45px] leading-[52px]', sample: 'Display Medium' },
+  { role: 'Display Small', fontClass: 'font-display text-[36px] leading-[44px]', sample: 'Display Small' },
+  { role: 'Headline Large', fontClass: 'font-display text-[32px] leading-[40px]', sample: 'Headline Large' },
+  { role: 'Headline Medium', fontClass: 'font-display text-[28px] leading-[36px]', sample: 'Headline Medium' },
+  { role: 'Headline Small', fontClass: 'font-display text-[24px] leading-[32px]', sample: 'Headline Small' },
+  { role: 'Title Large', fontClass: 'text-[22px] leading-[28px]', sample: 'Title Large' },
+  { role: 'Title Medium', fontClass: 'text-[16px] leading-[24px] font-medium tracking-[0.15px]', sample: 'Title Medium' },
+  { role: 'Title Small', fontClass: 'text-[14px] leading-[20px] font-medium tracking-[0.1px]', sample: 'Title Small' },
+  { role: 'Label Large', fontClass: 'text-[14px] leading-[20px] font-medium tracking-[0.1px]', sample: 'Label Large' },
+  { role: 'Label Medium', fontClass: 'text-[12px] leading-[16px] font-medium tracking-[0.5px]', sample: 'Label Medium' },
+  { role: 'Label Small', fontClass: 'text-[11px] leading-[16px] font-medium tracking-[0.5px]', sample: 'Label Small' },
+  { role: 'Body Large', fontClass: 'text-[16px] leading-[24px] tracking-[0.5px]', sample: 'Body Large' },
+  { role: 'Body Medium', fontClass: 'text-[14px] leading-[20px] tracking-[0.25px]', sample: 'Body Medium' },
+  { role: 'Body Small', fontClass: 'text-[12px] leading-[16px] tracking-[0.4px]', sample: 'Body Small' },
+]
+
 export default function DesignTokens() {
   return (
     <div className="space-y-12">
@@ -106,7 +124,7 @@ export default function DesignTokens() {
         <div className="space-y-8">
           {colorTokens.map((group) => (
             <div key={group.group} className="space-y-3">
-              <h3 className="text-base font-medium text-m3-on-surface">{group.group}</h3>
+              <h3 className="text-base font-medium text-m3-on-surface font-display">{group.group}</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
                 {group.swatches.map((swatch) => (
                   <div
@@ -122,6 +140,21 @@ export default function DesignTokens() {
                   </div>
                 ))}
               </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Typography */}
+      <Section
+        title="Typography Scale"
+        description="Display styles use Outfit. All other text uses PT Sans Caption."
+      >
+        <div className="space-y-4">
+          {typographyScale.map(({ role, fontClass, sample }) => (
+            <div key={role} className="flex items-baseline gap-6 border-b border-m3-outline-variant pb-4">
+              <span className="text-xs text-m3-on-surface-variant w-40 shrink-0">{role}</span>
+              <span className={`${fontClass} text-m3-on-surface`}>{sample}</span>
             </div>
           ))}
         </div>
@@ -182,7 +215,7 @@ export default function DesignTokens() {
               </code>
               <div className="flex-1 flex items-center gap-3">
                 <div
-                  className="h-� rounded-m3-xs bg-m3-primary/80 transition-all duration-300"
+                  className="h-2 rounded-m3-xs bg-m3-primary/80 transition-all duration-300"
                   style={{ width }}
                 />
                 <span className="text-xs text-m3-on-surface-variant shrink-0">{value}</span>
