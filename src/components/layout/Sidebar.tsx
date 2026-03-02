@@ -25,6 +25,19 @@ import {
   Circle,
   X,
   Menu,
+  NavigationIcon,
+  MonitorSmartphone,
+  PanelTop,
+  Search,
+  AlignJustify,
+  SeparatorHorizontal,
+  Table,
+  GitCommitHorizontal,
+  ChevronsLeftRight,
+  Tag,
+  ListIcon,
+  LayoutPanelLeft,
+  PanelBottomOpen,
 } from 'lucide-react'
 import * as Collapsible from '@radix-ui/react-collapsible'
 
@@ -68,6 +81,7 @@ const navSections: NavSection[] = [
   {
     title: 'Containment',
     items: [
+      { label: 'Bottom Sheet', path: '/components/bottom-sheet', icon: <PanelBottomOpen className="size-4" /> },
       { label: 'Card', path: '/components/card', icon: <RectangleHorizontal className="size-4" /> },
       { label: 'Dialog', path: '/components/dialog', icon: <PanelLeft className="size-4" /> },
     ],
@@ -75,8 +89,11 @@ const navSections: NavSection[] = [
   {
     title: 'Navigation',
     items: [
-      { label: 'Tabs', path: '/components/tabs', icon: <LayoutList className="size-4" /> },
       { label: 'Chip', path: '/components/chip', icon: <Layers className="size-4" /> },
+      { label: 'Navigation Bar', path: '/components/navigation-bar', icon: <NavigationIcon className="size-4" /> },
+      { label: 'Navigation Rail', path: '/components/navigation-rail', icon: <LayoutPanelLeft className="size-4" /> },
+      { label: 'Tabs', path: '/components/tabs', icon: <LayoutList className="size-4" /> },
+      { label: 'Top App Bar', path: '/components/top-app-bar', icon: <PanelTop className="size-4" /> },
     ],
   },
   {
@@ -84,14 +101,32 @@ const navSections: NavSection[] = [
     items: [
       { label: 'Checkbox', path: '/components/checkbox', icon: <CheckSquare className="size-4" /> },
       { label: 'Radio Button', path: '/components/radio', icon: <CircleDot className="size-4" /> },
-      { label: 'Switch', path: '/components/switch', icon: <ToggleRight className="size-4" /> },
       { label: 'Slider', path: '/components/slider', icon: <SlidersHorizontal className="size-4" /> },
+      { label: 'Switch', path: '/components/switch', icon: <ToggleRight className="size-4" /> },
     ],
   },
   {
     title: 'Text Input',
     items: [
+      { label: 'Search', path: '/components/search', icon: <Search className="size-4" /> },
       { label: 'Text Field', path: '/components/text-field', icon: <TextCursorInput className="size-4" /> },
+    ],
+  },
+  {
+    title: 'Lists & Menus',
+    items: [
+      { label: 'Divider', path: '/components/divider', icon: <SeparatorHorizontal className="size-4" /> },
+      { label: 'List', path: '/components/list', icon: <ListIcon className="size-4" /> },
+      { label: 'Menu', path: '/components/menu', icon: <AlignJustify className="size-4" /> },
+    ],
+  },
+  {
+    title: 'Data Display',
+    items: [
+      { label: 'Data Table', path: '/components/data-table', icon: <Table className="size-4" /> },
+      { label: 'Pagination', path: '/components/pagination', icon: <ChevronsLeftRight className="size-4" /> },
+      { label: 'Stepper', path: '/components/stepper', icon: <GitCommitHorizontal className="size-4" /> },
+      { label: 'Tag', path: '/components/tag', icon: <Tag className="size-4" /> },
     ],
   },
 ]
@@ -108,7 +143,7 @@ export const Sidebar: React.FC = () => {
           <Hand className="size-4 text-m3-on-primary" />
         </div>
         <div>
-          <h1 className="text-sm font-medium text-m3-on-surface leading-tight">M3 Design System</h1>
+          <h1 className="text-sm font-medium text-m3-on-surface leading-tight font-display">M3 Design System</h1>
           <p className="text-[10px] text-m3-on-surface-variant">v1.0 · shadcn + Material 3</p>
         </div>
       </div>
@@ -178,7 +213,6 @@ const SidebarSection: React.FC<SidebarSectionProps> = ({
   currentPath,
   onNavigate,
 }) => {
-  const isActive = section.items.some((item) => item.path === currentPath)
   const [open, setOpen] = React.useState(true)
 
   return (
