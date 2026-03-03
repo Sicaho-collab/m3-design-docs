@@ -11,7 +11,7 @@ export default function ListDoc() {
       <PageHeader title="Lists" description="Lists are continuous, vertical indexes of text and images. They organize content clearly and let users navigate." />
       <Section title="One-line List">
         <ComponentPreview>
-          <List className="border border-m3-outline-variant max-w-sm">
+          <List className="border border-m3-outline-variant max-w-sm w-full">
             <ListItem headline="Alice Martin" leading={<User />} trailing={<ChevronRight />} />
             <ListDivider />
             <ListItem headline="Settings" leading={<Settings />} trailing={<ChevronRight />} />
@@ -19,15 +19,15 @@ export default function ListDoc() {
             <ListItem headline="Notifications" leading={<Bell />} trailing={<ChevronRight />} />
           </List>
         </ComponentPreview>
-        <CodeBlock>{`<List>
+        <CodeBlock code={`<List>
   <ListItem headline="Alice Martin" leading={<User />} trailing={<ChevronRight />} />
   <ListDivider />
   <ListItem headline="Settings" leading={<Settings />} />
-</List>`}</CodeBlock>
+</List>`} />
       </Section>
-      <Section title="Two-line & Three-line">
+      <Section title="Two-line and Three-line">
         <ComponentPreview>
-          <List className="border border-m3-outline-variant max-w-sm">
+          <List className="border border-m3-outline-variant max-w-sm w-full">
             <ListItem headline="Project Alpha" supporting="Last updated 2 hours ago" leading={<Star />} trailing={<ChevronRight />} />
             <ListDivider />
             <ListItem headline="Design Tokens" overline="Updated" supporting="Primary colours changed to #9A76BE. Typography updated to Outfit and PT Sans Caption." leading={<Bell />} />
