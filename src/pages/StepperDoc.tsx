@@ -23,7 +23,6 @@ export default function StepperDoc() {
         title="Stepper"
         description="Steppers convey progress through numbered steps, ideal for multi-step forms and guided flows."
       />
-
       <Section title="Horizontal Stepper">
         <ComponentPreview>
           <div className="w-full space-y-6">
@@ -34,22 +33,20 @@ export default function StepperDoc() {
             </div>
           </div>
         </ComponentPreview>
-        <CodeBlock>{`<Stepper steps={steps} activeStep={1} />`}</CodeBlock>
+        <CodeBlock code={`<Stepper steps={steps} activeStep={1} />`} />
       </Section>
-
       <Section title="Vertical Stepper">
         <ComponentPreview>
           <Stepper steps={steps} activeStep={activeStep} orientation="vertical" className="max-w-xs" />
         </ComponentPreview>
-        <CodeBlock>{`<Stepper steps={steps} activeStep={1} orientation="vertical" />`}</CodeBlock>
+        <CodeBlock code={`<Stepper steps={steps} activeStep={1} orientation="vertical" />`} />
       </Section>
-
       <Section title="Props">
         <PropsTable
           props={[
             { name: 'steps', type: 'Step[]', required: true, description: 'Array of step objects with label, description, and optional flag' },
             { name: 'activeStep', type: 'number', required: true, description: 'Zero-based index of the current step' },
-            { name: 'orientation', type: "'horizontal' | 'vertical'", defaultValue: "'horizontal'", description: 'Layout direction' },
+            { name: 'orientation', type: "'horizontal' | 'vertical'", default: "'horizontal'", description: 'Layout direction' },
           ]}
         />
       </Section>
