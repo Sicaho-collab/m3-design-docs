@@ -8,6 +8,7 @@ import { DataTable, type Column } from '@/components/ui/data-table'
 import { Tag } from '@/components/ui/tag'
 
 interface User {
+  [key: string]: unknown
   name: string
   email: string
   role: string
@@ -32,7 +33,7 @@ const columns: Column<User>[] = [
     header: 'Status',
     cell: (row) => (
       <Tag variant={row.status === 'Active' ? 'tonal' : 'outlined'} size="sm">
-        {row.status}
+        {row.status as string}
       </Tag>
     ),
   },
@@ -53,8 +54,8 @@ export default function DataTableDoc() {
   }
 
   const sorted = [...sampleData].sort((a, b) => {
-    const av = a[sortKey as keyof User]
-    const bv = b[sortKey as keyof User]
+    const av = String(a[sortKey] ?? '')
+    const bv = String(b[sortKey] ?? '')
     return sortDir === 'asc' ? av.localeCompare(bv) : bv.localeCompare(av)
   })
 
@@ -64,20 +65,17 @@ export default function DataTableDoc() {
         title="Data Table"
         description="Data tables display information in rows and columns with optional sorting. They follow M3 list and surface patterns."
       />
-
       <Section title="Basic Table">
         <ComponentPreview>
           <DataTable columns={columns} data={sorted} sortKey={sortKey} sortDir={sortDir} onSort={handleSort} />
         </ComponentPreview>
-        <CodeBlock>{`<DataTable columns={columns} data={data} sortKey="name" sortDir="asc" onSort={handleSort} />`}</CodeBlock>
+        <CodeBlock code={`<DataTable columns={columns} data={data} sortKey="name" sortDir="asc" onSort={handleSort} />`} />
       </Section>
-
       <Section title="Empty State">
         <ComponentPreview>
           <DataTable columns={columns} data={[]} emptyState={<span>No users found</span>} />
         </ComponentPreview>
       </Section>
-
       <Section title="Props">
         <PropsTable
           props={[
@@ -86,7 +84,7 @@ export default function DataTableDoc() {
             { name: 'sortKey', type: 'string', description: 'Currently sorted column key' },
             { name: 'sortDir', type: "'asc' | 'desc'", description: 'Sort direction' },
             { name: 'onSort', type: '(key: string) => void', description: 'Sort change callback' },
-            { name: 'stickyHeader', type: 'boolean', defaultValue: 'false', description: 'Sticky table header' },
+            { name: 'stickyHeader', type: 'boolean', default: 'false', description: 'Sticky table header' },
             { name: 'onRowClick', type: '(row: T) => void', description: 'Row click handler' },
             { name: 'emptyState', type: 'ReactNode', description: 'Content when data is empty' },
           ]}
