@@ -20,10 +20,10 @@ export default function NavigationRailDoc() {
     <div className="space-y-12">
       <PageHeader title="Navigation Rail" description="Navigation rails provide access to primary destinations in apps when using tablet and desktop layouts." />
       <Section title="Navigation Rail">
-        <ComponentPreview className="p-0 overflow-hidden rounded-m3-md flex justify-start" style={{ minHeight: 300 }}>
+        <ComponentPreview className="p-0 overflow-hidden rounded-m3-md min-h-[300px] flex justify-start items-stretch">
           <NavigationRail items={railItems} activeIndex={active} onSelect={setActive} />
         </ComponentPreview>
-        <CodeBlock>{`<NavigationRail items={items} activeIndex={0} onSelect={setActive} />`}</CodeBlock>
+        <CodeBlock code={`<NavigationRail items={items} activeIndex={0} onSelect={setActive} />`} />
       </Section>
       <Section title="Props">
         <PropsTable props={[
