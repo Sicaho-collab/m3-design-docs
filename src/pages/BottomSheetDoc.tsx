@@ -7,7 +7,7 @@ import { PropsTable } from '@/components/docs/PropsTable'
 import { BottomSheet } from '@/components/ui/bottom-sheet'
 import { Button } from '@/components/ui/button'
 import { List, ListItem } from '@/components/ui/list'
-import { Share, Link, Copy, Mail } from 'lucide-react'
+import { Link, Copy, Mail } from 'lucide-react'
 
 export default function BottomSheetDoc() {
   const [open, setOpen] = useState(false)
@@ -19,17 +19,17 @@ export default function BottomSheetDoc() {
           <Button onClick={() => setOpen(true)}>Open Bottom Sheet</Button>
           <BottomSheet open={open} onOpenChange={setOpen} title="Share" description="Choose how you want to share this content">
             <List>
-              <ListItem headline="Copy link" leading={<Link />} interactive onClick={() => setOpen(false)} />
-              <ListItem headline="Copy text" leading={<Copy />} interactive onClick={() => setOpen(false)} />
-              <ListItem headline="Share via email" leading={<Mail />} interactive onClick={() => setOpen(false)} />
+              <ListItem headline="Copy link" leading={<Link />} onClick={() => setOpen(false)} />
+              <ListItem headline="Copy text" leading={<Copy />} onClick={() => setOpen(false)} />
+              <ListItem headline="Share via email" leading={<Mail />} onClick={() => setOpen(false)} />
             </List>
           </BottomSheet>
         </ComponentPreview>
-        <CodeBlock>{`<BottomSheet open={open} onOpenChange={setOpen} title="Share">
+        <CodeBlock code={`<BottomSheet open={open} onOpenChange={setOpen} title="Share">
   <List>
     <ListItem headline="Copy link" leading={<Link />} />
   </List>
-</BottomSheet>`}</CodeBlock>
+</BottomSheet>`} />
       </Section>
       <Section title="Props">
         <PropsTable props={[
@@ -37,7 +37,7 @@ export default function BottomSheetDoc() {
           { name: 'onOpenChange', type: '(open: boolean) => void', description: 'Open state change callback' },
           { name: 'title', type: 'string', description: 'Sheet title' },
           { name: 'description', type: 'string', description: 'Sheet description' },
-          { name: 'defaultSnap', type: "'sm' | 'md' | 'lg' | 'full'", defaultValue: "'md'", description: 'Initial height snap point' },
+          { name: 'defaultSnap', type: "'sm' | 'md' | 'lg' | 'full'", default: "'md'", description: 'Initial height snap point' },
         ]} />
       </Section>
     </div>
