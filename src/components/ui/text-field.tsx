@@ -70,7 +70,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
               aria-describedby={supportingText || errorText ? supportId : undefined}
               aria-invalid={error}
               className={cn(
-                'peer w-full bg-transparent outline-none text-m3-on-surface text-base h-14 px-4 pt-4 pb-1 placeholder-transparent',
+                'peer w-full bg-transparent outline-none text-m3-on-surface text-base h-14 px-4 pt-5 pb-1 placeholder-transparent',
                 leadingIcon && 'pl-2',
                 trailingIcon && 'pr-2'
               )}
@@ -81,9 +81,10 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
               <label
                 htmlFor={inputId}
                 className={cn(
-                  'absolute left-4 top-1/2 -translate-y-1/2 text-m3-on-surface-variant text-base transition-all duration-200 pointer-events-none',
-                  'peer-focus:top-2 peer-focus:translate-y-0 peer-focus:text-xs peer-focus:text-m3-primary',
-                  'peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:text-xs',
+                  'absolute left-4 top-1/2 -translate-y-1/2 text-m3-on-surface-variant text-base transition-all duration-200 pointer-events-none origin-top-left',
+                  variant === 'outlined'
+                    ? 'peer-focus:-top-0 peer-focus:-translate-y-1/2 peer-focus:text-xs peer-focus:text-m3-primary peer-focus:bg-white peer-focus:px-1 peer-[:not(:placeholder-shown)]:-top-0 peer-[:not(:placeholder-shown)]:-translate-y-1/2 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:bg-white peer-[:not(:placeholder-shown)]:px-1'
+                    : 'peer-focus:top-1 peer-focus:translate-y-0 peer-focus:text-xs peer-focus:text-m3-primary peer-[:not(:placeholder-shown)]:top-1 peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:text-xs',
                   leadingIcon && 'left-2',
                   error && 'peer-focus:text-m3-error'
                 )}
