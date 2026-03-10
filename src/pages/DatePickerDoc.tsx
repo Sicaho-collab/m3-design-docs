@@ -151,10 +151,8 @@ export default function DatePickerDoc() {
         title="Basic"
         description="Click the button to open the calendar. Select a start date then an end date. The Apply button confirms typed date/time inputs."
       >
-        <ComponentPreview>
-          <div className="pt-12 pb-48 flex justify-center">
-            <Calendar allowClear value={date} onChange={setDate} />
-          </div>
+        <ComponentPreview noClip className="items-start justify-start">
+          <Calendar allowClear value={date} onChange={setDate} />
         </ComponentPreview>
         <CodeBlock code={basicUsageCode} language="tsx" />
       </Section>
@@ -163,15 +161,13 @@ export default function DatePickerDoc() {
         title="With Presets"
         description="Pass a presets object to show a searchable combobox alongside the calendar button. Users can type to filter presets or enter relative and fixed date expressions."
       >
-        <ComponentPreview>
-          <div className="pt-12 pb-48 flex justify-center">
-            <Calendar
-              allowClear
-              value={dateWithPresets}
-              onChange={setDateWithPresets}
-              presets={examplePresets}
-            />
-          </div>
+        <ComponentPreview noClip className="items-start justify-start">
+          <Calendar
+            allowClear
+            value={dateWithPresets}
+            onChange={setDateWithPresets}
+            presets={examplePresets}
+          />
         </ComponentPreview>
         <CodeBlock code={withPresetsCode} language="tsx" />
       </Section>
@@ -180,15 +176,13 @@ export default function DatePickerDoc() {
         title="Horizontal Layout"
         description="Use horizontalLayout to display the calendar grid and date/time inputs side by side inside the popover."
       >
-        <ComponentPreview>
-          <div className="pt-12 pb-56 flex justify-center">
-            <Calendar
-              allowClear
-              horizontalLayout
-              value={dateHorizontal}
-              onChange={setDateHorizontal}
-            />
-          </div>
+        <ComponentPreview noClip className="items-start justify-start">
+          <Calendar
+            allowClear
+            horizontalLayout
+            value={dateHorizontal}
+            onChange={setDateHorizontal}
+          />
         </ComponentPreview>
         <CodeBlock code={horizontalCode} language="tsx" />
       </Section>
@@ -197,15 +191,13 @@ export default function DatePickerDoc() {
         title="Without Time Input"
         description="Set showTimeInput to false to hide the time fields and only allow date-level selection."
       >
-        <ComponentPreview>
-          <div className="pt-12 pb-48 flex justify-center">
-            <Calendar
-              allowClear
-              showTimeInput={false}
-              value={dateNoTime}
-              onChange={setDateNoTime}
-            />
-          </div>
+        <ComponentPreview noClip className="items-start justify-start">
+          <Calendar
+            allowClear
+            showTimeInput={false}
+            value={dateNoTime}
+            onChange={setDateNoTime}
+          />
         </ComponentPreview>
         <CodeBlock
           code={`<Calendar allowClear showTimeInput={false} value={date} onChange={setDate} />`}
