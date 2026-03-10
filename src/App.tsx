@@ -40,6 +40,7 @@ import DatePickerDoc from '@/pages/DatePickerDoc'
 import TextFieldDoc from '@/pages/TextFieldDoc'
 import SearchBarDoc from '@/pages/SearchBarDoc'
 import AIPromptBoxDoc from '@/pages/AIPromptBoxDoc'
+import RichTextEditorDoc from '@/pages/RichTextEditorDoc'
 
 // Lists & Menus
 import ListDoc from '@/pages/ListDoc'
@@ -100,6 +101,7 @@ function App() {
           <Route path="/components/text-field" element={<TextFieldDoc />} />
           <Route path="/components/search" element={<SearchBarDoc />} />
           <Route path="/components/ai-prompt-box" element={<AIPromptBoxDoc />} />
+          <Route path="/components/rich-text-editor" element={<RichTextEditorDoc />} />
 
           {/* Lists & Menus */}
           <Route path="/components/list" element={<ListDoc />} />
