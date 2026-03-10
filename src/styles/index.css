@@ -1,6 +1,16 @@
 @import "tailwindcss";
 
 @theme inline {
+  /* shadcn-compat tokens — used by Stepper and other components */
+  --color-border: var(--color-m3-outline-variant);
+  --color-primary: var(--color-m3-primary);
+  --color-primary-foreground: var(--color-m3-on-primary);
+  --color-secondary: var(--color-m3-surface-container);
+  --color-secondary-foreground: var(--color-m3-on-surface);
+  --color-destructive: var(--color-m3-error);
+  --color-destructive-foreground: var(--color-m3-on-error);
+  --color-muted-foreground: var(--color-m3-on-surface-variant);
+
   --color-context-card-border: var(--context-card-border);
   --color-blue-900: var(--ds-blue-900);
   --color-gray-200: var(--ds-gray-200);
