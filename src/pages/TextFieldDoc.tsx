@@ -9,12 +9,6 @@ import { Search, Eye, Mail } from 'lucide-react'
 
 const textFieldProps: PropDef[] = [
   {
-    name: 'variant',
-    type: "'filled' | 'outlined'",
-    default: "'filled'",
-    description: 'The visual style of the text field container.',
-  },
-  {
     name: 'label',
     type: 'string',
     default: '—',
@@ -73,16 +67,12 @@ const textFieldProps: PropDef[] = [
 const usageCode = `import { TextField } from '@/components/ui/text-field'
 import { Search, Eye } from 'lucide-react'
 
-{/* Filled variant */}
-<TextField label="Email" variant="filled" />
-
-{/* Outlined variant */}
-<TextField label="Username" variant="outlined" />
+{/* Basic */}
+<TextField label="Email" />
 
 {/* With leading and trailing icons */}
 <TextField
   label="Search"
-  variant="outlined"
   leadingIcon={<Search />}
   trailingIcon={<Eye />}
 />
@@ -107,45 +97,24 @@ export default function TextFieldDoc() {
     <div className="space-y-12">
       <PageHeader
         title="Text field"
-        description="Text fields allow users to enter and edit text. They come in filled and outlined variants and support labels, helper text, icons, and validation states."
+        description="Text fields allow users to enter and edit text. They support labels, helper text, icons, and validation states."
         status="stable"
       />
 
       {/* --- Filled --- */}
       <Section
-        title="Filled"
-        description="Filled text fields have more visual weight and work well on surfaces that need emphasis."
+        title="Default"
+        description="Filled text fields have a white background with a bottom border that highlights on focus."
       >
-        <ComponentPreview title="Filled variant" className="flex-col items-stretch gap-6">
+        <ComponentPreview title="Default" className="flex-col items-stretch gap-6">
           <div className="max-w-sm">
-            <TextField label="Full name" variant="filled" />
+            <TextField label="Full name" />
           </div>
           <div className="max-w-sm">
             <TextField
               label="Email address"
-              variant="filled"
               type="email"
               supportingText="We will not share your email"
-            />
-          </div>
-        </ComponentPreview>
-      </Section>
-
-      {/* --- Outlined --- */}
-      <Section
-        title="Outlined"
-        description="Outlined text fields have less visual emphasis and are suited for dense forms."
-      >
-        <ComponentPreview title="Outlined variant" className="flex-col items-stretch gap-6">
-          <div className="max-w-sm">
-            <TextField label="Username" variant="outlined" />
-          </div>
-          <div className="max-w-sm">
-            <TextField
-              label="Phone number"
-              variant="outlined"
-              type="tel"
-              supportingText="Include country code"
             />
           </div>
         </ComponentPreview>
@@ -154,9 +123,9 @@ export default function TextFieldDoc() {
       {/* --- Multiline --- */}
       <Section
         title="Multiline"
-        description="Multiline text fields always use the filled variant. The label animates from inside the field to the top on focus or when filled — matching Material's filled textarea behavior. When a placeholder is provided, the label stays shrunk at the top so the placeholder text is visible."
+        description="Multiline text fields render a textarea. The label animates from inside the field to the top on focus or when filled. When a placeholder is provided, the label stays shrunk at the top so the placeholder text is visible."
       >
-        <ComponentPreview title="Filled multiline" className="flex-col items-stretch gap-6">
+        <ComponentPreview title="Multiline" className="flex-col items-stretch gap-6">
           <div className="max-w-sm">
             <TextField label="Multiline" multiline rows={4} />
           </div>
@@ -187,14 +156,12 @@ export default function TextFieldDoc() {
           <div className="max-w-sm">
             <TextField
               label="Search"
-              variant="outlined"
               leadingIcon={<Search />}
             />
           </div>
           <div className="max-w-sm">
             <TextField
               label="Email"
-              variant="filled"
               leadingIcon={<Mail />}
               trailingIcon={<Eye />}
             />
@@ -211,7 +178,6 @@ export default function TextFieldDoc() {
           <div className="max-w-sm">
             <TextField
               label="Password"
-              variant="filled"
               type="password"
               supportingText="Must be at least 8 characters"
             />
@@ -228,19 +194,9 @@ export default function TextFieldDoc() {
           <div className="max-w-sm">
             <TextField
               label="Email"
-              variant="filled"
               error
               errorText="Please enter a valid email address"
               defaultValue="not-an-email"
-            />
-          </div>
-          <div className="max-w-sm">
-            <TextField
-              label="Username"
-              variant="outlined"
-              error
-              errorText="Username is already taken"
-              defaultValue="admin"
             />
           </div>
         </ComponentPreview>

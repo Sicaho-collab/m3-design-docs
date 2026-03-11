@@ -41,6 +41,9 @@ import {
   CalendarDays,
   Sparkles,
   MessageSquareText,
+  BotMessageSquare,
+  PencilLine,
+  ContactRound,
 } from 'lucide-react'
 import * as Collapsible from '@radix-ui/react-collapsible'
 
@@ -112,6 +115,8 @@ const navSections: NavSection[] = [
   {
     title: 'Text Input',
     items: [
+      { label: 'AI Prompt Box', path: '/components/ai-prompt-box', icon: <BotMessageSquare className="size-4" /> },
+      { label: 'Rich Text Editor', path: '/components/rich-text-editor', icon: <PencilLine className="size-4" /> },
       { label: 'Search', path: '/components/search', icon: <Search className="size-4" /> },
       { label: 'Text Field', path: '/components/text-field', icon: <TextCursorInput className="size-4" /> },
     ],
@@ -127,6 +132,7 @@ const navSections: NavSection[] = [
   {
     title: 'Data Display',
     items: [
+      { label: 'Contacts Table', path: '/components/contacts-table', icon: <ContactRound className="size-4" /> },
       { label: 'Data Table', path: '/components/data-table', icon: <Table className="size-4" /> },
       { label: 'Pagination', path: '/components/pagination', icon: <ChevronsLeftRight className="size-4" /> },
       { label: 'Stepper', path: '/components/stepper', icon: <GitCommitHorizontal className="size-4" /> },

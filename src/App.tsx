@@ -39,6 +39,8 @@ import DatePickerDoc from '@/pages/DatePickerDoc'
 // Text Input
 import TextFieldDoc from '@/pages/TextFieldDoc'
 import SearchBarDoc from '@/pages/SearchBarDoc'
+import AIPromptBoxDoc from '@/pages/AIPromptBoxDoc'
+import RichTextEditorDoc from '@/pages/RichTextEditorDoc'
 
 // Lists & Menus
 import ListDoc from '@/pages/ListDoc'
@@ -47,6 +49,7 @@ import DividerDoc from '@/pages/DividerDoc'
 
 // Data display
 import DataTableDoc from '@/pages/DataTableDoc'
+import ContactsTableDoc from '@/pages/ContactsTableDoc'
 import StepperDoc from '@/pages/StepperDoc'
 import PaginationDoc from '@/pages/PaginationDoc'
 import TagDoc from '@/pages/TagDoc'
@@ -98,6 +101,8 @@ function App() {
           {/* Text Input */}
           <Route path="/components/text-field" element={<TextFieldDoc />} />
           <Route path="/components/search" element={<SearchBarDoc />} />
+          <Route path="/components/ai-prompt-box" element={<AIPromptBoxDoc />} />
+          <Route path="/components/rich-text-editor" element={<RichTextEditorDoc />} />
 
           {/* Lists & Menus */}
           <Route path="/components/list" element={<ListDoc />} />
@@ -106,6 +111,7 @@ function App() {
 
           {/* Data display */}
           <Route path="/components/data-table" element={<DataTableDoc />} />
+          <Route path="/components/contacts-table" element={<ContactsTableDoc />} />
           <Route path="/components/stepper" element={<StepperDoc />} />
           <Route path="/components/pagination" element={<PaginationDoc />} />
           <Route path="/components/tag" element={<TagDoc />} />
