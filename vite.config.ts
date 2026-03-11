@@ -11,4 +11,12 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  optimizeDeps: {
+    exclude: ['@sicaho-collab/m3-design-system'],
+  },
+  server: {
+    watch: {
+      ignored: ['!**/node_modules/@sicaho-collab/**'],
+    },
+  },
 })

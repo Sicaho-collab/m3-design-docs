@@ -159,7 +159,7 @@ function DateRangePickerInlineDemo() {
         inline
         startDate={start}
         endDate={end}
-        onChange={(range) => {
+        onChange={(range: { startDate: Date | null; endDate: Date | null }) => {
           setStart(range.startDate)
           setEnd(range.endDate)
         }}
@@ -249,7 +249,7 @@ export default function DatePickerDoc() {
           <DateRangePicker
             title="Schedule a gig"
             description="Select start and end dates for the engagement."
-            onConfirm={(range) => alert(`Selected: ${JSON.stringify(range)}`)}
+            onConfirm={(range: { startDate: Date | null; endDate: Date | null }) => alert(`Selected: ${JSON.stringify(range)}`)}
             onCancel={() => alert('Cancelled')}
           />
         </ComponentPreview>
