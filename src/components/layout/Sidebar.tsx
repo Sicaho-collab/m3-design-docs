@@ -44,6 +44,7 @@ import {
   BotMessageSquare,
   PencilLine,
   ContactRound,
+  AlertTriangle,
 } from 'lucide-react'
 import * as Collapsible from '@radix-ui/react-collapsible'
 
@@ -79,6 +80,7 @@ const navSections: NavSection[] = [
   {
     title: 'Communication',
     items: [
+      { label: 'Alert', path: '/components/alert', icon: <AlertTriangle className="size-4" /> },
       { label: 'Badge', path: '/components/badge', icon: <Bell className="size-4" /> },
       { label: 'Progress', path: '/components/progress', icon: <Loader className="size-4" /> },
       { label: 'Snackbar', path: '/components/snackbar', icon: <MessageSquare className="size-4" /> },
@@ -144,6 +146,7 @@ const navSections: NavSection[] = [
     items: [
       { label: 'Button Colorful', path: '/custom/button-colorful', icon: <Sparkles className="size-4" /> },
       { label: 'Chat Input', path: '/custom/chat-input', icon: <MessageSquareText className="size-4" /> },
+      { label: 'Vertical Nav Stepper', path: '/custom/vertical-nav-stepper', icon: <GitCommitHorizontal className="size-4" /> },
     ],
   },
 ]
@@ -155,7 +158,7 @@ export const Sidebar: React.FC = () => {
   const sidebarContent = (
     <nav className="flex flex-col h-full" aria-label="Component navigation">
       {/* Header */}
-      <div className="flex items-center gap-3 px-4 py-5 border-b border-m3-outline-variant">
+      <div className="flex items-center gap-3 px-4 py-5">
         <div className="size-8 rounded-m3-sm bg-m3-primary flex items-center justify-center">
           <Hand className="size-4 text-m3-on-primary" />
         </div>
@@ -178,7 +181,7 @@ export const Sidebar: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <div className="px-4 py-3 border-t border-m3-outline-variant">
+      <div className="px-4 py-3">
         <p className="text-[10px] text-m3-on-surface-variant">
           Based on Material 3 Design Kit
         </p>
@@ -208,10 +211,11 @@ export const Sidebar: React.FC = () => {
       {/* Sidebar */}
       <aside
         className={cn(
-          'fixed top-0 left-0 z-40 h-screen w-[280px] bg-m3-surface-container-low border-r border-m3-outline-variant transition-transform duration-300',
-          'lg:translate-x-0 lg:static lg:z-auto',
+          'fixed top-0 left-0 z-40 h-screen w-[280px] transition-transform duration-300',
+          'lg:translate-x-0 lg:sticky lg:top-0 lg:z-auto',
           mobileOpen ? 'translate-x-0' : '-translate-x-full'
         )}
+        style={{ background: 'linear-gradient(to bottom, #ECEEF1, #F3EAFC)' }}
       >
         {sidebarContent}
       </aside>

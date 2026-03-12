@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @source "../../node_modules/@sicaho-collab/ui-web/dist";
-@source inline("hover:scale-105 active:scale-95 shadow-lg shadow-md backdrop-blur-sm bg-m3-primary/10 text-m3-primary ring-1 ring-m3-primary/30 shadow-m3-primary/25 hover:border-m3-primary/50 border-m3-outline-variant/50 bg-m3-surface/80 shadow-soft border-m3-outline-variant/60");
+@source inline("hover:scale-105 active:scale-95 shadow-lg shadow-md backdrop-blur-sm bg-m3-primary/10 text-m3-primary ring-1 ring-m3-primary/30 shadow-m3-primary/25 hover:border-m3-primary/50 border-m3-outline-variant/50 bg-m3-surface/80 shadow-soft border-m3-outline-variant/60 bg-blue-500/10 text-blue-600 bg-green-500/10 text-green-600 bg-amber-500/10 text-amber-600 bg-m3-error-container text-m3-error border-blue-200/60 border-green-200/60 border-amber-200/60 border-m3-error-container text-m3-on-surface-variant/50 hover:bg-m3-on-surface/8");
 @import "@sicaho-collab/ui-web/styles";
 
 @theme inline {

@@ -61,10 +61,11 @@ export function NavigationRail({
   return (
     <nav
       className={cn(
-        'flex flex-col items-center min-h-full bg-m3-surface-container border-r border-m3-outline-variant py-3 transition-[width] duration-300 ease-in-out',
+        'flex flex-col items-center h-screen sticky top-0 py-3 transition-[width] duration-300 ease-in-out',
         expanded ? 'w-[220px]' : 'w-[80px]',
         className,
       )}
+      style={{ background: 'linear-gradient(to bottom, #ECEEF1, #F3EAFC)' }}
       aria-label="Side navigation"
     >
       {/* ── Header (logo) ── */}

@@ -5,6 +5,9 @@ interface ButtonColorfulProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
     label?: string
 }
 
+// M3 brand gradient matching the AI Prompt Box stroke
+const M3_GRADIENT = "linear-gradient(to right, #9A76BE, #C084FC, #E879A0)"
+
 export function ButtonColorful({
     className,
     label = "Explore Components",
@@ -15,11 +18,10 @@ export function ButtonColorful({
         <div
             className={cn(
                 "relative inline-flex rounded-full p-[1.5px] transition-all duration-300 group/btn",
-                disabled
-                    ? "bg-m3-outline-variant"
-                    : "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
+                disabled && "bg-m3-outline-variant",
                 className,
             )}
+            style={disabled ? undefined : { background: M3_GRADIENT }}
         >
             <button
                 type="button"
@@ -44,10 +46,13 @@ export function ButtonColorful({
 
                     {!disabled && (
                         <>
-                            <span className="font-medium bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent group-hover/btn:opacity-0 transition-opacity duration-300">
+                            <span
+                                className="font-medium bg-clip-text text-transparent group-hover/btn:opacity-0 transition-opacity duration-300"
+                                style={{ backgroundImage: M3_GRADIENT }}
+                            >
                                 {label}
                             </span>
-                            <ArrowUpRight className="w-3.5 h-3.5 text-purple-500 group-hover/btn:opacity-0 transition-opacity duration-300" />
+                            <ArrowUpRight className="w-3.5 h-3.5 text-m3-primary group-hover/btn:opacity-0 transition-opacity duration-300" />
 
                             <span className="absolute inset-0 flex items-center justify-center gap-2 font-medium text-white opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300">
                                 {label}

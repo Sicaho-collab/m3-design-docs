@@ -12,6 +12,7 @@ import FABDoc from '@/pages/FABDoc'
 import IconButtonDoc from '@/pages/IconButtonDoc'
 
 // Communication
+import AlertDoc from '@/pages/AlertDoc'
 import BadgeDoc from '@/pages/BadgeDoc'
 import ProgressDoc from '@/pages/ProgressDoc'
 import SnackbarDoc from '@/pages/SnackbarDoc'
@@ -56,6 +57,7 @@ import TagDoc from '@/pages/TagDoc'
 // Custom
 import ButtonColorfulDoc from '@/pages/ButtonColorfulDoc'
 import ChatInputDoc from '@/pages/ChatInputDoc'
+import VerticalNavStepperDoc from '@/pages/VerticalNavStepperDoc'
 
 function App() {
   return (
@@ -73,6 +75,7 @@ function App() {
           <Route path="/components/icon-button" element={<IconButtonDoc />} />
 
           {/* Communication */}
+          <Route path="/components/alert" element={<AlertDoc />} />
           <Route path="/components/badge" element={<BadgeDoc />} />
           <Route path="/components/progress" element={<ProgressDoc />} />
           <Route path="/components/snackbar" element={<SnackbarDoc />} />
@@ -117,6 +120,7 @@ function App() {
           {/* Custom */}
           <Route path="/custom/button-colorful" element={<ButtonColorfulDoc />} />
           <Route path="/custom/chat-input" element={<ChatInputDoc />} />
+          <Route path="/custom/vertical-nav-stepper" element={<VerticalNavStepperDoc />} />
         </Route>
       </Routes>
     </HashRouter>
