@@ -24,7 +24,7 @@ export const PlatformUsage: React.FC<PlatformUsageProps> = ({
 
   const variants = {
     enter: { opacity: 0, y: 12 },
-    center: { opacity: 1, y: 0, transition: { duration: 0.25, ease: 'easeOut' } },
+    center: { opacity: 1, y: 0, transition: { duration: 0.25, ease: 'easeOut' as const } },
     exit: { opacity: 0, y: -8, transition: { duration: 0.15 } },
   }
 
