@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Calendar, type RangeValue } from '@/components/ui/calendar'
-import { DateRangePicker } from '@sicaho-collab/m3-design-system'
+import { DateRangePicker } from '@sicaho-collab/ui-web'
 import { PageHeader } from '@/components/docs/PageHeader'
 import { Section } from '@/components/docs/Section'
 import { ComponentPreview } from '@/components/docs/ComponentPreview'
@@ -253,7 +253,7 @@ export default function DatePickerDoc() {
             onCancel={() => alert('Cancelled')}
           />
         </ComponentPreview>
-        <CodeBlock code={`import { DateRangePicker } from '@sicaho-collab/m3-design-system'
+        <CodeBlock code={`import { DateRangePicker } from '@sicaho-collab/ui-web'
 
 <DateRangePicker
   title="Schedule a gig"
@@ -270,7 +270,7 @@ export default function DatePickerDoc() {
         <ComponentPreview>
           <DateRangePickerInlineDemo />
         </ComponentPreview>
-        <CodeBlock code={`import { DateRangePicker } from '@sicaho-collab/m3-design-system'
+        <CodeBlock code={`import { DateRangePicker } from '@sicaho-collab/ui-web'
 
 const [start, setStart] = useState<Date | null>(null)
 const [end, setEnd] = useState<Date | null>(null)

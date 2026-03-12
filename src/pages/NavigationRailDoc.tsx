@@ -42,7 +42,7 @@ const navRailItemProps: PropDef[] = [
   { name: 'badge', type: 'number | boolean', description: 'Badge indicator — boolean for dot, number for count' },
 ]
 
-const basicCode = `import { NavigationRail } from '@sicaho-collab/m3-design-system'
+const basicCode = `import { NavigationRail } from '@sicaho-collab/ui-web'
 import { Home, Search, Bookmark, Settings } from 'lucide-react'
 
 const items = [

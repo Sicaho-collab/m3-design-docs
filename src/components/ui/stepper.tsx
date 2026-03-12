@@ -1,2 +1,2 @@
-export { Stepper, Step, useStepper } from '@sicaho-collab/m3-design-system'
-export type { StepProps, StepperProps, StepItem } from '@sicaho-collab/m3-design-system'
+export { Stepper, Step, useStepper } from '@sicaho-collab/ui-web'
+export type { StepProps, StepperProps, StepItem } from '@sicaho-collab/ui-web'
