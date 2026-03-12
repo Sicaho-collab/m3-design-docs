@@ -14,7 +14,7 @@ export const ComponentPreview: React.FC<ComponentPreviewProps> = ({
   title,
   noClip = false,
 }) => (
-  <div className={cn('rounded-m3-md border border-m3-outline-variant/60 shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_16px_rgba(0,0,0,0.04)]', noClip ? 'overflow-visible' : 'overflow-hidden')}>
+  <div className={cn('rounded-m3-md border border-m3-outline-variant/60 shadow-soft', noClip ? 'overflow-visible' : 'overflow-hidden')}>
     {title && (
       <div className="px-4 py-2.5 bg-m3-surface-container border-b border-m3-outline-variant">
         <span className="text-xs font-medium text-m3-on-surface-variant uppercase tracking-wider">

@@ -1,9 +1,12 @@
 @import "tailwindcss";
 @source "../../node_modules/@sicaho-collab/ui-web/dist";
-@source inline("hover:scale-105 active:scale-95 shadow-lg shadow-md backdrop-blur-sm bg-m3-primary/10 text-m3-primary ring-1 ring-m3-primary/30 shadow-m3-primary/25 hover:border-m3-primary/50 border-m3-outline-variant/50 bg-m3-surface/80 shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_16px_rgba(0,0,0,0.04)] border-m3-outline-variant/60");
+@source inline("hover:scale-105 active:scale-95 shadow-lg shadow-md backdrop-blur-sm bg-m3-primary/10 text-m3-primary ring-1 ring-m3-primary/30 shadow-m3-primary/25 hover:border-m3-primary/50 border-m3-outline-variant/50 bg-m3-surface/80 shadow-soft border-m3-outline-variant/60");
 @import "@sicaho-collab/ui-web/styles";
 
 @theme inline {
+  /* ── Soft card shadow ── */
+  --shadow-soft: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+
   /* shadcn-compat tokens — used by Stepper and other components */
   --color-border: var(--color-m3-outline-variant);
   --color-primary: var(--color-m3-primary);

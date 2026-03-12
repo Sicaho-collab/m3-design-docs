@@ -34,7 +34,7 @@ export const PlatformUsage: React.FC<PlatformUsageProps> = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: 'easeOut' }}
       className={cn(
-        'rounded-m3-md border border-m3-outline-variant/60 shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_16px_rgba(0,0,0,0.04)] bg-m3-surface overflow-hidden',
+        'rounded-m3-md border border-m3-outline-variant/60 shadow-soft bg-m3-surface overflow-hidden',
         className,
       )}
     >

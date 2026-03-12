@@ -9,7 +9,7 @@ const cardVariants = cva(
       variant: {
         elevated: 'bg-m3-surface-container-low shadow-m3-1 hover:shadow-m3-2',
         filled: 'bg-m3-surface-container-highest',
-        outlined: 'bg-m3-surface border border-m3-outline-variant/60 shadow-[0_1px_4px_rgba(0,0,0,0.06),0_4px_16px_rgba(0,0,0,0.04)]',
+        outlined: 'bg-m3-surface border border-m3-outline-variant/60 shadow-soft',
       },
     },
     defaultVariants: {
