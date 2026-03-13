@@ -45,6 +45,8 @@ import {
   PencilLine,
   ContactRound,
   AlertTriangle,
+  DollarSign,
+  Droplets,
 } from 'lucide-react'
 import * as Collapsible from '@radix-ui/react-collapsible'
 
@@ -67,6 +69,7 @@ const navSections: NavSection[] = [
       { label: 'Getting Started', path: '/', icon: <Home className="size-4" /> },
       { label: 'Design Tokens', path: '/tokens', icon: <Palette className="size-4" /> },
       { label: 'Typography', path: '/typography', icon: <Type className="size-4" /> },
+      { label: 'Accent Colours', path: '/accent-colours', icon: <Droplets className="size-4" /> },
     ],
   },
   {
@@ -147,6 +150,7 @@ const navSections: NavSection[] = [
       { label: 'Button Colorful', path: '/custom/button-colorful', icon: <Sparkles className="size-4" /> },
       { label: 'Chat Input', path: '/custom/chat-input', icon: <MessageSquareText className="size-4" /> },
       { label: 'Vertical Nav Stepper', path: '/custom/vertical-nav-stepper', icon: <GitCommitHorizontal className="size-4" /> },
+      { label: 'Budget Input', path: '/custom/budget-input', icon: <DollarSign className="size-4" /> },
     ],
   },
 ]
@@ -258,7 +262,7 @@ const SidebarSection: React.FC<SidebarSectionProps> = ({
                 cn(
                   'flex items-center gap-2.5 px-3 py-2 text-sm rounded-m3-full transition-all duration-200',
                   isActive
-                    ? 'bg-m3-secondary-container text-m3-on-secondary-container font-medium'
+                    ? 'bg-m3-primary-container text-m3-on-primary-container font-medium'
                     : 'text-m3-on-surface-variant hover:bg-m3-on-surface/8 hover:text-m3-on-surface'
                 )
               }

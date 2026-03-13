@@ -5,6 +5,7 @@ import { Layout } from '@/components/layout/Layout'
 import GettingStarted from '@/pages/GettingStarted'
 import DesignTokens from '@/pages/DesignTokens'
 import Typography from '@/pages/Typography'
+import AccentColoursDoc from '@/pages/AccentColoursDoc'
 
 // Actions
 import ButtonDoc from '@/pages/ButtonDoc'
@@ -58,6 +59,7 @@ import TagDoc from '@/pages/TagDoc'
 import ButtonColorfulDoc from '@/pages/ButtonColorfulDoc'
 import ChatInputDoc from '@/pages/ChatInputDoc'
 import VerticalNavStepperDoc from '@/pages/VerticalNavStepperDoc'
+import BudgetInputDoc from '@/pages/BudgetInputDoc'
 
 function App() {
   return (
@@ -68,6 +70,7 @@ function App() {
           <Route path="/" element={<GettingStarted />} />
           <Route path="/tokens" element={<DesignTokens />} />
           <Route path="/typography" element={<Typography />} />
+          <Route path="/accent-colours" element={<AccentColoursDoc />} />
 
           {/* Actions */}
           <Route path="/components/button" element={<ButtonDoc />} />
@@ -121,6 +124,7 @@ function App() {
           <Route path="/custom/button-colorful" element={<ButtonColorfulDoc />} />
           <Route path="/custom/chat-input" element={<ChatInputDoc />} />
           <Route path="/custom/vertical-nav-stepper" element={<VerticalNavStepperDoc />} />
+          <Route path="/custom/budget-input" element={<BudgetInputDoc />} />
         </Route>
       </Routes>
     </HashRouter>
